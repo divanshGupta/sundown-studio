@@ -1,0 +1,125 @@
+@font-face {
+    font-family: hans;
+    src: url(./NeueHaasDisplayRoman.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: hans;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+#page1 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 0 2vw;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 2vw 0;
+}
+#menu a {
+    text-decoration: none;
+    color: #000;
+    position: relative;
+    z-index: 9;
+}
+#menu {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+#menu h4 {
+    border: 1px solid #8a8a8a89;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-weight: 500;
+    position: relative;
+    color: #000;
+    transition: all ease .4s;
+    overflow: hidden;
+}
+
+#menu h4::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    background-color: #000;
+    border-radius: 100%;
+    transition: all ease .4s;
+}
+#menu h4:hover::after {
+    bottom: 0;
+    border-radius: 0;
+}
+#menu h4:hover a{
+    color: #fff;
+}
+#center {
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 2vh;
+    border-bottom: 1px solid #8a8a8a89;
+}
+#left p{
+    width: 25vw;
+    line-height: 2vw;
+    font-size: 1.8vw;
+}
+#right h1 {
+    font-size: 6vw;
+    text-align: right;
+    line-height: 8vw;
+}
+
+#page1 video {
+    width: 100%;
+    border-radius: 30px;
+    margin-top: 4vw;
+    padding-bottom: 50px;
+}
+
+.box1 {
+    height: 300px;
+    width: 300px;
+    background-color: orangered;
+    border-radius: 100%;
+    position: absolute;
+    filter: blur(20px);
+}
+.box2 {
+    height: 300px;
+    width: 300px;
+    background-color: orangered;
+    border-radius: 100%;
+    position: absolute;
+    filter: blur(20px);
+    animation-name: anime;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes anime {
+    from{
+        transform: translate(-20%, -20%);
+    }
+    to{
+        transform: translate(10px, 10px);
+    }
+}

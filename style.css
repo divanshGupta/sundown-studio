@@ -92,34 +92,151 @@ html, body{
     border-radius: 30px;
     margin-top: 4vw;
     padding-bottom: 50px;
+    position: relative;
+    background-color: #000;
 }
-
-.box1 {
-    height: 300px;
-    width: 300px;
+.blob {
+    width: 25vw;
+    height: 25vw;
+    right: 0;
+    top: 75vh;
+    position: absolute;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+.hero-1 {
+    height: 25vw;
+    width: 25vw;
     background-color: orangered;
     border-radius: 100%;
     position: absolute;
     filter: blur(20px);
 }
-.box2 {
-    height: 300px;
-    width: 300px;
+.hero-2 {
+    height: 25vw;
+    width: 25vw;
     background-color: orangered;
     border-radius: 100%;
     position: absolute;
     filter: blur(20px);
     animation-name: anime;
-    animation-duration: 2s;
+    animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-@keyframes anime {
+.hero-3 {
+    height: 25vw;
+    width: 25vw;
+    background-color: orangered;
+    border-radius: 100%;
+    position: absolute;
+    filter: blur(20px);
+    animation-name: anime2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+/* @keyframes anime {
     from{
         transform: translate(-20%, -20%);
     }
     to{
         transform: translate(10px, 10px);
+    }
+} */
+@keyframes anime2 {
+    from{
+        transform: translate(-20%, -20%);
+    }
+    to{
+        transform: translate(-10px, -10px);
+    }
+}
+
+#page-2 {
+    min-height: 100vh;
+    width: 100%;
+    padding: 8vw 0;
+    background-color: #EFEAE3;
+}
+#moving-text {
+    white-space: nowrap;
+    overflow-x: auto;
+    margin: 5vw 0;
+}
+#moving-text::-webkit-scrollbar {
+    display: none;
+}
+#moving-text h1{
+    font-size: 8vw;
+    text-transform: uppercase;
+    display: inline-block;
+}
+.con {
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: moving-text;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.gola {
+    width: 3vw;
+    height: 3vw;
+    background-color: orangered;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1vw 2vw;
+}
+@keyframes moving-text {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+    
+}
+#content-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6vw 5vw;
+    position: relative;
+}
+#part1 h1 {
+    font-size: 4vw;
+    width: 70vw;
+    position: relative;
+    z-index: 9;
+}
+#part2 img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 2vw;
+}
+#part2 p {
+    font-size: 1vw;
+    text-align: justify;
+}
+#gooey {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    background-color: #fe320a;
+    position: absolute;
+    filter: blur(20px);
+    left: 20vw;
+    top: 30vh;
+    animation: gooey 3s linear infinite alternate;
+}
+@keyframes gooey {
+    from {
+        transform: translate(-10%, 10%) skew(0);
+    }
+    to {
+        transform: translate(10%, -10%) skew(-12deg);
     }
 }

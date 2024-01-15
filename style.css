@@ -19,7 +19,10 @@ html, body{
     position: relative;
     padding: 0 2vw;
 }
-
+#main {
+    position: relative;
+    z-index: 10;
+}
 #navbar {
     display: flex;
     align-items: center;
@@ -239,4 +242,111 @@ html, body{
     to {
         transform: translate(10%, -10%) skew(-12deg);
     }
+}
+/* image animation accordion design */
+#page-3 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+}
+.elem {
+    position: relative;
+    width: 100vw;
+    height: 120px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #6b6b6b;
+}
+.elem h1 {
+    position: absolute;
+    z-index: 9;
+    font-size: 3vw;
+    padding: 2vw;
+}
+#overlay {
+    width: 100vw;
+    height: 100%;
+    background-color: #FF9831;
+    position: absolute;
+    top: -100%;
+    transition: all ease .5s;
+}
+.elem:hover #overlay {
+    top:0;
+}
+#fixed-image {
+    position: fixed;
+    width: 18vw;
+    height: 25vw;
+    border-radius: 15px;
+    z-index: 99;
+    top: 25vh;
+    left: 50vw;
+    background-size: cover;
+    display: none;
+    transform: all ease .1s;
+}
+#page-4 {
+    background-color: #EFEAE3;
+    height: 100vh;
+    width: 100%;
+}
+#page-5 {
+    /* background-color: #000; */
+    height: 100vh;
+    width: 100%;
+}
+.footer {
+    position: fixed;
+    height: 105vh;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    z-index: 9;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1vw 3vw;
+}
+.footer h1 {
+    font-size: 23vw;
+}
+.footer-up {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3vw;
+}
+.footer-menu h3 {
+    font-size: 2vw;
+}
+.footer-newsletter {
+    width: 20vw;
+    border-bottom: 1px solid #fff;
+}
+.footer-newsletter h5 {
+    font-size: 1.1vw;
+    margin-bottom: 1vw;
+}
+.footer-newsletter input {
+    background-color: transparent;
+    border: none;
+    width: 20vw;
+    height: 5vh;
+}
+.footer-down {
+    border-top: 1px solid #dadada;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-down h5 {
+    font-size: 1.1vw;
 }
